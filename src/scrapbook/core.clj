@@ -1,4 +1,4 @@
-(ns scrapbook.core (:gen-class))
+(ns scrapbook.core)
 
 (def book1 {:title "On the Origin of Species" :author "Charles Darwin" :published 1859})
 
