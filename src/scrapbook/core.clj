@@ -27,7 +27,7 @@
   (loop [i 1 acc []]
     (if (< i n)
       (recur (inc i) (conj acc i))
-      (identity acc))))
+      acc)))
 
 (defn find-digits "Find digits in the input"
   [input]
@@ -36,7 +36,7 @@
     (loop [match (re-find matcher)                ;; find next match
            digits []]                             ;; vector of matches
       (if-not match
-        (identity digits)                         ;; return vector of matches
+        digits                                    ;; return vector of matches
         (recur (re-find matcher) (conj digits (Integer/parseInt match)))))))
 
 (defn -main "Main" [& _]

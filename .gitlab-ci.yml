@@ -15,7 +15,7 @@ build:
   script: lein with-profile cicd do clean, check, compile, test, run
   only:
     changes:
-      - "*.clj"
+      - "**/*.clj"
       - .gitlab-ci.yml
   except:
     changes:
