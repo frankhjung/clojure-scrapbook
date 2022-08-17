@@ -9,5 +9,4 @@
   :profiles {:dev {:aliases {"build" ["do" "check," "test," "run"]}}
              :cicd {:local-repo ".m2/repository"}}
   :clean-targets [:target-path]
-  :aliases {"build" ["do" "check," "test," "run"]}
-  :pedantic? :abort)
+  :aliases {"build" ["do" "check," "test," "run"]})
