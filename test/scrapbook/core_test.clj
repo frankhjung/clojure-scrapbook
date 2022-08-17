@@ -6,7 +6,8 @@
                                     all-paradigms
                                     some-paradigms
                                     my-echo
-                                    loop-n]]))
+                                    loop-n
+                                    find-digits]]))
 
 (deftest test-book1
   (testing "keys"
@@ -58,3 +59,8 @@
 (deftest test-loop-n
   (testing "loop 10"
     (is (= (loop-n 10) `[1 2 3 4 5 6 7 8 9]))))
+
+(deftest test-find-digits
+  (testing "find digits"
+    (let [data "a0_b1_c2_d3_e4_f5"]
+      (is (= (find-digits data) `[0 1 2 3 4 5])))))

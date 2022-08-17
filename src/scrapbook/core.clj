@@ -29,6 +29,16 @@
       (recur (inc i) (conj acc i))
       (identity acc))))
 
+(defn find-digits "Find digits in the input"
+  [input]
+  (let [digit-match #"\d+"                        ;; regex for digits
+        matcher (re-matcher digit-match input)]   ;; regex matcher
+    (loop [match (re-find matcher)                ;; find next match
+           digits []]                             ;; vector of matches
+      (if-not match
+        (identity digits)                         ;; return vector of matches
+        (recur (re-find matcher) (conj digits (Integer/parseInt match)))))))
+
 (defn -main "Main" [& _]
   (println (str "book1 keys: " (keys book1)))
   (println (str "book1 vals: " (vals book1)))
@@ -39,4 +49,5 @@
   (println (greet "Welcome" "Alice" "Bob" "Charles"))
   (println (my-echo :one))
   (println (my-echo :one :two))
-  (println (loop-n 10)))
+  (println (loop-n 10))
+  (println (find-digits "my phone number is no +611-0123-456-789")))
