@@ -1,6 +1,12 @@
 (ns scrapbook.core-test
   (:require [clojure.test :refer [deftest is testing]]
-            [scrapbook.core :refer [book1 book2 paradigms all-paradigms some-paradigms my-echo]]))
+            [scrapbook.core :refer [book1
+                                    book2
+                                    paradigms
+                                    all-paradigms
+                                    some-paradigms
+                                    my-echo
+                                    loop-n]]))
 
 (deftest test-book1
   (testing "keys"
@@ -48,3 +54,7 @@
     (is (= (my-echo :one) "argument:one")))
   (testing "one two"
     (is (= (my-echo :one :two) "arguments:one:two"))))
+
+(deftest test-loop-n
+  (testing "loop 10"
+    (is (= (loop-n 10) `[1 2 3 4 5 6 7 8 9]))))

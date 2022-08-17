@@ -13,14 +13,21 @@
 ;; remove object-orientated
 (def some-paradigms (disj all-paradigms :object-orientated))
 
-(defn greet "Function with variable number of arguments."
+(defn greet "Function with variable number of arguments"
   [w & who]
   (map #(str w " " % "!") who))
 
 (defn my-echo
-  "Function with different processing for arguments passed."
+  "Function with different processing for arguments passed"
   ([one] (str "argument" one))
   ([one two] (str "arguments" one two)))
+
+(defn loop-n "Loop n times"
+  [n]
+  (loop [i 1 acc []]
+    (if (< i n)
+      (recur (inc i) (conj acc i))
+      (identity acc))))
 
 (defn -main "Main" [& _]
   (println (str "book1 keys: " (keys book1)))
@@ -31,4 +38,5 @@
   (println (str "some paradigms: " some-paradigms))
   (println (greet "Welcome" "Alice" "Bob" "Charles"))
   (println (my-echo :one))
-  (println (my-echo :one :two)))
+  (println (my-echo :one :two))
+  (println (loop-n 10)))
