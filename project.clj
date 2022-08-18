@@ -5,10 +5,10 @@
   :license {:name "GNU General Public License (GPLv3)"
             :url "https://www.gnu.org/licenses/gpl-3.0.txt"}
   ;; :pedantic? :abort conflicts with vs code
-  :dependencies [[org.clojure/clojure "1.10.0"]]
+  :dependencies [[org.clojure/clojure "1.10.3"]]
   :plugins [[lein-eftest "0.5.9"]]
-  :aot [scrapbook.core]    ;; aot - ahead-of-time compilation
-  :main scrapbook.core
+  ;; :aot [scrapbook.main]    ;; aot - ahead-of-time compilation
+  :main ^:skip-aot scrapbook.main
   :target-path "target/%s"
   :profiles {:dev {:aliases {"build" ["do" "check," "eftest," "run"]}}
              :cicd {:local-repo ".m2/repository"}}

@@ -1,18 +1,18 @@
-(ns scrapbook.loops)
+(ns scrapbook.loops "Loop examples")
 
-(defn loop-n "Loop n times"
+(defn loop_n "Loop n times"
   [n]
   (loop [i 1 acc []]
     (if (< i n)
       (recur (inc i) (conj acc i))
       acc)))
 
-(defn find-digits "Find digits in the input"
+(defn find_digits "Find digits in the input"
   [input]
-  (let [digit-match #"\d+"                        ;; regex for digits
-        matcher (re-matcher digit-match input)]   ;; regex matcher
+  (let [digit_match #"\d+"                        ;; regex for digits
+        matcher (re-matcher digit_match input)]   ;; regex matcher
     (loop [match (re-find matcher)                ;; find next match
            digits []]                             ;; vector of matches
-      (if-not match
+      (if-not match                               ;; repeat until no more matches
         digits                                    ;; return vector of matches
         (recur (re-find matcher) (conj digits (Integer/parseInt match)))))))

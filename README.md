@@ -17,7 +17,7 @@ To build a standalone JAR:
 lein uberjar
 ```
 
-This will build 2 JAR's:
+This will build 2 JARs:
 
 ```text
   28613 Aug 18 10:59 target/uberjar/scrapbook-0.1.0-SNAPSHOT.jar
@@ -42,6 +42,19 @@ lein eftest
 ```
 
 `eftest` is the default used by the `build` alias.
+
+### Run a specific test suite
+
+To run, for example, just loop tests:
+
+```bash
+$ lein eftest :only test/scrapbook/loops_test.clj
+
+2/2   100% [==================================================]  ETA: 00:00
+
+Ran 2 tests in 0.019 seconds
+2 assertions, 0 failures, 0 errors.
+```
 
 ### Start REPL
 
@@ -78,5 +91,5 @@ start](https://practical.li/clojure/clojure-editors/editor-user-guides/vscode-ca
 Open a terminal in Code, start a leiningen repl. The port provided will be used
 to connect Calva.
 
-You can mimimise the terminal. To re-open use command palette, `View: Toggle
+You can minimize the terminal. To re-open use command palette, `View: Toggle
 Terminal`.
