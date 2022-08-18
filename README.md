@@ -19,8 +19,10 @@ lein uberjar
 
 This will build 2 JAR's:
 
-    28613 Aug 18 10:59 target/uberjar/scrapbook-0.1.0-SNAPSHOT.jar
-  4596184 Aug 18 10:59 target/uberjar/scrapbook-0.1.0-SNAPSHOT-standalone.jar
+```text
+  28613 Aug 18 10:59 target/uberjar/scrapbook-0.1.0-SNAPSHOT.jar
+4596184 Aug 18 10:59 target/uberjar/scrapbook-0.1.0-SNAPSHOT-standalone.jar
+```
 
 The Uber JAR can be called with:
 
@@ -31,7 +33,7 @@ java -jar target/uberjar/scrapbook-0.1.0-SNAPSHOT-standalone.jar
 ## eftest
 
 I've used [eftest](https://github.com/weavejester/eftest) as a Clojure test
-runner. 
+runner.
 
 Invoke with:
 

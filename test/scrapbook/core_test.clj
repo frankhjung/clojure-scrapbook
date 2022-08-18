@@ -1,13 +1,9 @@
 (ns scrapbook.core-test
   (:require [clojure.test :refer [deftest is testing]]
-            [scrapbook.core :refer [book1
-                                    book2
-                                    paradigms
-                                    all-paradigms
-                                    some-paradigms
-                                    my-echo
-                                    loop-n
-                                    find-digits]]))
+            [scrapbook.books :refer [book1 book2]]
+            [scrapbook.paradigms :refer [paradigms all-paradigms some-paradigms]]
+            [scrapbook.echo :refer [my-echo]]
+            [scrapbook.loops :refer [loop-n find-digits]]))
 
 (deftest test-book1
   (testing "keys"

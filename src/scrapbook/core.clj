@@ -1,45 +1,10 @@
 ;; https://clojure.org/guides/learn/namespaces
 (ns scrapbook.core
-  (:gen-class))
-
-(def book1 {:title "On the Origin of Species" :author "Charles Darwin" :published 1859})
-
-;; create a new book with more attributes
-(def book2 (merge book1 {:pages 502}))
-
-(def paradigms #{:functional :procedural :object-orientated :logical})
-
-;; update paradigms
-(def all-paradigms (conj paradigms :mathematical))
-
-;; remove object-orientated
-(def some-paradigms (disj all-paradigms :object-orientated))
-
-(defn greet "Function with variable number of arguments"
-  [w & who]
-  (map #(str w " " % "!") who))
-
-(defn my-echo
-  "Function with different processing for arguments passed"
-  ([one] (str "argument" one))
-  ([one two] (str "arguments" one two)))
-
-(defn loop-n "Loop n times"
-  [n]
-  (loop [i 1 acc []]
-    (if (< i n)
-      (recur (inc i) (conj acc i))
-      acc)))
-
-(defn find-digits "Find digits in the input"
-  [input]
-  (let [digit-match #"\d+"                        ;; regex for digits
-        matcher (re-matcher digit-match input)]   ;; regex matcher
-    (loop [match (re-find matcher)                ;; find next match
-           digits []]                             ;; vector of matches
-      (if-not match
-        digits                                    ;; return vector of matches
-        (recur (re-find matcher) (conj digits (Integer/parseInt match)))))))
+  (:gen-class)
+  (:require [scrapbook.books :refer [book1 book2]]
+            [scrapbook.paradigms :refer [paradigms all-paradigms some-paradigms]]
+            [scrapbook.echo :refer [greet my-echo]]
+            [scrapbook.loops :refer [loop-n find-digits]]))
 
 (defn -main "Main" [& _]
   (println (str "book1 keys: " (keys book1)))
