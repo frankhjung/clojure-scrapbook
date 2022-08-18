@@ -77,7 +77,8 @@ In this case it is: `localhost:34169`.
 
 ### Shortcuts
 
-- evaluate current top level form: `<alt-enter>`
+- focus REPL window `ctrl+alt+o o`
+- evaluate current top level form: `alt+enter`
 
 See also [Top 10 Calva Commands](https://calva.io/commands-top10/)
 
