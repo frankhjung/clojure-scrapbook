@@ -1,17 +1,47 @@
 # Clojure
 
-## Command Line
+## Leiningen
 
-### Leiningen
-
-To create a new project:
+To create a new project using [Leiningen](https://leiningen.org/):
 
 ```bash
 cd [project_parent_directory]
 lein new app [project_name]
 ```
 
-### Start REPL on Commandline
+### Build Uber JAR
+
+To build a standalone JAR:
+
+```bash
+lein uberjar
+```
+
+This will build 2 JAR's:
+
+    28613 Aug 18 10:59 target/uberjar/scrapbook-0.1.0-SNAPSHOT.jar
+  4596184 Aug 18 10:59 target/uberjar/scrapbook-0.1.0-SNAPSHOT-standalone.jar
+
+The Uber JAR can be called with:
+
+```bash
+java -jar target/uberjar/scrapbook-0.1.0-SNAPSHOT-standalone.jar
+```
+
+## eftest
+
+I've used [eftest](https://github.com/weavejester/eftest) as a Clojure test
+runner. 
+
+Invoke with:
+
+```bash
+lein eftest
+```
+
+`eftest` is the default used by the `build` alias.
+
+### Start REPL
 
 To start a command line REPL, call:
 
@@ -43,6 +73,8 @@ Ensure that `CLASSPATH` is not set before staring REPL.
 See also [VSCode and Calva quick
 start](https://practical.li/clojure/clojure-editors/editor-user-guides/vscode-calva.html)
 
-Open a terminal in Code, start a leiningen repl. The port provided will be used to connect Calva.
+Open a terminal in Code, start a leiningen repl. The port provided will be used
+to connect Calva.
 
-You can mimimise the terminal. To re-open use command palette, `View: Toggle Terminal`.
+You can mimimise the terminal. To re-open use command palette, `View: Toggle
+Terminal`.

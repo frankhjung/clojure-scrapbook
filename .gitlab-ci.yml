@@ -17,7 +17,3 @@ build:
     changes:
       - "**/*.clj"
       - .gitlab-ci.yml
-  except:
-    changes:
-      - "*.md"
-      - LICENSE

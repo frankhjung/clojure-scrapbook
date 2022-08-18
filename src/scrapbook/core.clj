@@ -1,4 +1,6 @@
-(ns scrapbook.core)
+;; https://clojure.org/guides/learn/namespaces
+(ns scrapbook.core
+  (:gen-class))
 
 (def book1 {:title "On the Origin of Species" :author "Charles Darwin" :published 1859})
 
