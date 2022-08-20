@@ -9,7 +9,7 @@ cd [project_parent_directory]
 lein new app [project_name]
 ```
 
-### Build Uber JAR
+### Build Über JAR
 
 To build a standalone JAR:
 
@@ -24,7 +24,7 @@ This will build 2 JARs:
 4596184 Aug 18 10:59 target/uberjar/scrapbook-0.1.0-SNAPSHOT-standalone.jar
 ```
 
-The Uber JAR can be called with:
+The über JAR can be called with:
 
 ```bash
 java -jar target/uberjar/scrapbook-0.1.0-SNAPSHOT-standalone.jar
