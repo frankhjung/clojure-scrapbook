@@ -94,3 +94,15 @@ to connect Calva.
 
 You can minimize the terminal. To re-open use command palette, `View: Toggle
 Terminal`.
+
+## Word Puzzle
+
+### Dictionary
+
+Get valid dictionary words from British dictionary:
+
+```bash
+cat dictionary | gawk '/^[a-z]{3,9}$/ {print $0}' | head -10 > words
+```
+
+Where, dictionary is a link to `/usr/share/dict/british-english-huge`.
