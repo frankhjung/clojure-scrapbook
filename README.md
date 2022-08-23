@@ -74,8 +74,36 @@ This will start a Clojure REPL server:
 nREPL server started on port 34169 on host 127.0.0.1 - nrepl://127.0.0.1:34169
 ```
 
+Useful functions in REPL:
+
+```clojure
+    Docs: (doc function-name-here)
+          (find-doc "part-of-name-here")
+  Source: (source function-name-here)
+ Javadoc: (javadoc java-object-or-class-here)
+    Exit: Control+D or (exit) or (quit)
+ Results: Stored in vars *1, *2, *3, an exception in *e
+```
+
+#### VS Code
+
 You can connect VS Code to this server by specifying `host:port`.
 In this case it is: `localhost:34169`.
+
+#### Vim
+
+Connect to REPL in vim using [fireplace
+plugin](https://github.com/tpope/vim-fireplace) using:
+
+`:FireplaceConnect host:port`
+
+Useful commands:
+
+* `:Source`, `:Doc`, and `:FindDoc`, which map to the underlying `clojure.repl` macro (with tab complete, of course).
+* `K` is mapped to look up the symbol under the cursor with doc.
+* `[d` is mapped to look up the symbol under the cursor with source.
+* `[<C-D>` jumps to the definition of a symbol (even if it's inside a jar file). `<C-]>` does the same and uses the tag stack.
+* `gf`, everybody's favourite "go to file" command, works on namespaces.
 
 ## Calva
 
