@@ -105,6 +105,11 @@ Useful commands:
 * `[<C-D>` jumps to the definition of a symbol (even if it's inside a jar file). `<C-]>` does the same and uses the tag stack.
 * `gf`, everybody's favourite "go to file" command, works on namespaces.
 
+*Suggestion*
+
+Install [Cljfmt plugin](https://github.com/venantius/vim-cljfmt) to format
+Clojure.
+
 ## Calva
 
 ### Shortcuts
