@@ -1,5 +1,9 @@
 # Clojure
 
+* [Clojure](https://clojure.org/)
+* [API's](https://clojure.github.io/clojure/)
+* [Core library](https://clojuredocs.org/core-library)
+
 ## Leiningen
 
 To create a new project using [Leiningen](https://leiningen.org/):
@@ -64,7 +68,7 @@ To start a command line REPL, call:
 rlwrap lein repl
 ```
 
-This will start a Clojure REPL server -
+This will start a Clojure REPL server:
 
 ```text
 nREPL server started on port 34169 on host 127.0.0.1 - nrepl://127.0.0.1:34169
@@ -77,8 +81,8 @@ In this case it is: `localhost:34169`.
 
 ### Shortcuts
 
-- focus REPL window `ctrl+alt+o o`
-- evaluate current top level form: `alt+enter`
+* focus REPL window `ctrl+alt+o o`
+* evaluate current top level form: `alt+enter`
 
 See also [Top 10 Calva Commands](https://calva.io/commands-top10/)
 
@@ -106,3 +110,34 @@ cat dictionary | gawk '/^[a-z]{3,9}$/ {print $0}' | head -10 > words
 ```
 
 Where, dictionary is a link to `/usr/share/dict/british-english-huge`.
+
+### Is a valid character?
+
+Use `clojure.string/replace-first`:
+
+```clojure
+(clojure.string/replace-first "abacde" "a" "")
+"bacde"
+```
+
+### Parse String to Integer
+
+```clojure
+(Integer/parseInt "5")
+5
+```
+
+### Random numbers
+
+This function will generate a random floating number from 0.0 to 1.0
+
+```clojure
+(rand)
+```
+
+To simulate a 6 sided dice:
+
+```clojure
+(take 11 (repeatedly #(inc (rand-int 6))))
+(3 4 1 4 1 3 5 3 6 5 6)
+```
