@@ -3,7 +3,7 @@
     (:gen-class)
     (:require [scrapbook.books :refer [book1 book2]]
               [scrapbook.echo :refer [greet my_echo]]
-              [scrapbook.files :refer [get_words_1]]
+              [scrapbook.files :refer [get_words_1 get_words_2 get_words_3]]
               [scrapbook.lists :refer [f_nth my_nth]]
               [scrapbook.loops :refer [loop_n find_digits]]
               [scrapbook.paradigms :refer [paradigms all_paradigms some_paradigms]]
@@ -25,5 +25,7 @@
   (println (str "   nth 4 [a b c d e f g h]: " (nth '[a b c d e f g h] (dec 5))))
   (println (str " f_nth 5 [a b c d e f g h]: " ((f_nth 5) '[a b c d e f g h])))
   (println (str "my_nth 5 [a b c d e f g h]: " (my_nth 5 '[a b c d e f g h])))
-  (println (str "get word: " (some #{"aardvark"} (get_words_1 "words"))))
+  (println (str "get word 1: " (some #{"aardvark"} (get_words_1 "words"))))
+  (println (str "get word 2: " (some #{"aardvark"} (get_words_2 "words"))))
+  (println (str "get word 3: " (some #{"aardvark"} (get_words_3 "words"))))
   (println (str "10 d6 rolls: " (apply list (rolls 10)))))
