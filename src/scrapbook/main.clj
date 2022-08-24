@@ -9,7 +9,7 @@
               [scrapbook.paradigms :refer [paradigms all_paradigms some_paradigms]]
               [scrapbook.randoms :refer [rolls]]))
 
-(defn -main "Main" [& _]
+(defn -main "Main" [& _] ;; ignore input parameters
   (println (str "Main: run code examples.\n"))
   (println (str "book1 keys: " (keys book1)))
   (println (str "book1 vals: " (vals book1)))
@@ -21,7 +21,7 @@
   (println (my_echo :one))
   (println (my_echo :one :two))
   (println (loop_n 10))
-  (println (find_digits "my phone number is no +611-0123-456-789"))
+  (println (find_digits "find digits in this string +611-0123-456-789"))
   (println (str "   nth 4 [a b c d e f g h]: " (nth '[a b c d e f g h] (dec 5))))
   (println (str " f_nth 5 [a b c d e f g h]: " ((f_nth 5) '[a b c d e f g h])))
   (println (str "my_nth 5 [a b c d e f g h]: " (my_nth 5 '[a b c d e f g h])))
