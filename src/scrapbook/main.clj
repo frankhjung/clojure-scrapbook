@@ -7,7 +7,8 @@
               [scrapbook.lists :refer [f_nth my_nth]]
               [scrapbook.loops :refer [loop_n find_digits]]
               [scrapbook.paradigms :refer [paradigms all_paradigms some_paradigms]]
-              [scrapbook.randoms :refer [rolls]]))
+              [scrapbook.randoms :refer [rolls]]
+              [scrapbook.words :refer [validWord?]]))
 
 (defn -main "Main" [& _] ;; ignore input parameters
   (println (str "Main: run code examples.\n"))
@@ -28,4 +29,6 @@
   (println (str "get word 1: " (some #{"aardvark"} (get_words_1 "words"))))
   (println (str "get word 2: " (some #{"aardvark"} (get_words_2 "words"))))
   (println (str "get word 3: " (some #{"aardvark"} (get_words_3 "words"))))
-  (println (str "10 d6 rolls: " (apply list (rolls 10)))))
+  (println (str "10 d6 rolls: " (apply list (rolls 10))))
+  (println (str "valid word foobar baz?: " (validWord? "foobar" "baz")))
+  (println (str "valid word foobar foa?: " (validWord? "foobar" "foa"))))
