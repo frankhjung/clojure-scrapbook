@@ -6,7 +6,7 @@
   [file]
   (with-open [reader (io/reader file)]
     (->> (line-seq reader)
-         (filter (fn [word] (re-find #"^[a-z]{3,9}$" word)))
+         (filter #(re-find #"^[a-z]{3,9}$" %))
          (set))))
 
 ;; returns a persistent vector

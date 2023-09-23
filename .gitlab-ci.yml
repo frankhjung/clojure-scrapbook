@@ -1,6 +1,6 @@
 ---
 
-image: clojure:temurin-11-lein-alpine
+image: clojure:temurin-11-lein-2.10.0-alpine
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}

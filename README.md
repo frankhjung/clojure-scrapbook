@@ -34,6 +34,14 @@ The über JAR can be called with:
 java -jar target/uberjar/scrapbook-0.1.0-SNAPSHOT-standalone.jar
 ```
 
+### Run main
+
+Run this projects `main` function:
+
+```bash
+lein run
+```
+
 ## eftest
 
 I've used [eftest](https://github.com/weavejester/eftest) as a Clojure test
@@ -105,7 +113,7 @@ Useful commands:
 * `[<C-D>` jumps to the definition of a symbol (even if it's inside a jar file). `<C-]>` does the same and uses the tag stack.
 * `gf`, everybody's favourite "go to file" command, works on namespaces.
 
-*Suggestion*
+##### Suggestion
 
 Install [Cljfmt plugin](https://github.com/venantius/vim-cljfmt) to format
 Clojure.
