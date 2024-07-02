@@ -1,4 +1,4 @@
-(ns scrapbook.paradigms_test
+(ns scrapbook.paradigmstest
   (:require [clojure.test :refer [deftest is testing]]
             [scrapbook.paradigms :refer [paradigms all_paradigms some_paradigms]]))
 

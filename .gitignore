@@ -1,4 +1,5 @@
 .calva/
+.nrepl-port
 checkouts/
 *.class
 classes/

@@ -1,4 +1,4 @@
-(ns scrapbook.echo_test
+(ns scrapbook.echotest
   (:require [clojure.test :refer [deftest is testing]]
             [scrapbook.echo :refer [greet my_echo]]))
 

@@ -1,4 +1,4 @@
-(ns scrapbook.files_test
+(ns scrapbook.filestest
   (:require [clojure.test :refer [deftest is testing]]
             [scrapbook.files :refer [get_words_1
                                      get_words_2

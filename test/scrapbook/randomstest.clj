@@ -1,4 +1,4 @@
-(ns scrapbook.randoms_test
+(ns scrapbook.randomstest
   (:require [clojure.test :refer [deftest is testing]]
             [clojure.spec.alpha :refer [int-in-range?]]
             [scrapbook.randoms :refer [d6 rolls]]))

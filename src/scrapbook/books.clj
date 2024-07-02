@@ -1,5 +1,8 @@
 (ns scrapbook.books)
 
+;; TODO: refactor to use defrecord
+;; see also deftype, defprotocol, definterface
+
 ;; create base book
 (def book1
   {:title "On the Origin of Species"

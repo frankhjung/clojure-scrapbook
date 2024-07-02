@@ -1,4 +1,4 @@
-(ns scrapbook.loops_test
+(ns scrapbook.loopstest
   (:require [clojure.test :refer [deftest is testing]]
             [scrapbook.loops :refer [loop_n find_digits]]))
 

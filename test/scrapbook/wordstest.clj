@@ -1,4 +1,4 @@
-(ns scrapbook.words-test
+(ns scrapbook.wordstest
   (:require [clojure.test :refer [deftest is testing]]
             [scrapbook.words :refer [validWord?]]))
 

@@ -1,4 +1,4 @@
-(ns scrapbook.lists_test
+(ns scrapbook.liststest
   (:require [clojure.test :refer [deftest is testing]]
             [scrapbook.lists :refer [f_nth my_nth]]))
 

@@ -1,4 +1,4 @@
-(ns scrapbook.books_test
+(ns scrapbook.bookstest
   (:require [clojure.test :refer [deftest is testing]]
             [scrapbook.books :refer [book1 book2]]))
 

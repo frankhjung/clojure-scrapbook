@@ -4,13 +4,37 @@
 * [API's](https://clojure.github.io/clojure/)
 * [Core library](https://clojuredocs.org/core-library)
 
+## Dependencies
+
+* [Clojure fmt](https://github.com/weavejester/cljfmt)
+* [Clojure](https://clojure.org/)
+* [eftest](https://github.com/weavejester/eftest)
+* [Java](https://www.java.com/en/download/)
+* [Leiningen](https://leiningen.org/)
+
 ## Leiningen
+
+### Create New Project
 
 To create a new project using [Leiningen](https://leiningen.org/):
 
 ```bash
 cd [project_parent_directory]
 lein new app [project_name]
+```
+
+### Check Project Syntax
+
+```bash
+lein check
+```
+
+### Test Project with eftest
+
+Using [eftest](https://github.com/weavejester/eftest):
+
+```bash
+lein eftest
 ```
 
 ### Build Über JAR
@@ -34,38 +58,12 @@ The über JAR can be called with:
 java -jar target/uberjar/scrapbook-0.1.0-SNAPSHOT-standalone.jar
 ```
 
-### Run main
+### Run
 
 Run this projects `main` function:
 
 ```bash
 lein run
-```
-
-## eftest
-
-I've used [eftest](https://github.com/weavejester/eftest) as a Clojure test
-runner.
-
-Invoke with:
-
-```bash
-lein eftest
-```
-
-`eftest` is the default used by the `build` alias.
-
-### Run a specific test suite
-
-To run, for example, just loop tests:
-
-```bash
-$ lein eftest :only test/scrapbook/loops_test.clj
-
-2/2   100% [==================================================]  ETA: 00:00
-
-Ran 2 tests in 0.019 seconds
-2 assertions, 0 failures, 0 errors.
 ```
 
 ### Start REPL
@@ -93,12 +91,47 @@ Useful functions in REPL:
  Results: Stored in vars *1, *2, *3, an exception in *e
 ```
 
-#### VS Code
+## cljfmt
+
+Install the clojure formatter, see
+[cljfmt](https://github.com/weavejester/cljfmt).
+
+## eftest
+
+I've used [eftest](https://github.com/weavejester/eftest) as a Clojure test
+runner.
+
+Invoke with:
+
+```bash
+lein eftest
+```
+
+`eftest` is the default used by the `build` alias.
+
+### Run a Specific Test
+
+To run, for example, just loop tests:
+
+```bash
+$ lein eftest :only test/scrapbook/loops_test.clj
+
+2/2   100% [==================================================]  ETA: 00:00
+
+Ran 2 tests in 0.019 seconds
+2 assertions, 0 failures, 0 errors.
+```
+
+## IDE Plugins
+
+### VS Code
 
 You can connect VS Code to this server by specifying `host:port`.
 In this case it is: `localhost:34169`.
 
-#### Vim
+### Vim
+
+#### Fireplace Plugin
 
 Connect to REPL in vim using [fireplace
 plugin](https://github.com/tpope/vim-fireplace) using:
@@ -113,7 +146,7 @@ Useful commands:
 * `[<C-D>` jumps to the definition of a symbol (even if it's inside a jar file). `<C-]>` does the same and uses the tag stack.
 * `gf`, everybody's favourite "go to file" command, works on namespaces.
 
-##### Suggestion
+#### vim-cljfmt Plugin
 
 Install [Cljfmt plugin](https://github.com/venantius/vim-cljfmt) to format
 Clojure.
@@ -127,7 +160,7 @@ Clojure.
 
 See also [Top 10 Calva Commands](https://calva.io/commands-top10/)
 
-### Start REPL in VSCode
+### Start REPL in VS Code
 
 Ensure that `CLASSPATH` is not set before staring REPL.
 
@@ -152,7 +185,7 @@ cat dictionary | gawk '/^[a-z]{3,9}$/ {print $0}' | head -10 > words
 
 Where, dictionary is a link to `/usr/share/dict/british-english-huge`.
 
-### Is a valid character?
+### Has Valid Character?
 
 Use `clojure.string/replace-first`:
 
@@ -168,9 +201,9 @@ Use `clojure.string/replace-first`:
 5
 ```
 
-### Random numbers
+### Random Numbers
 
-This function will generate a random floating number from 0.0 to 1.0
+This function will generate a random floating number from 0.0 to 1.0 (default):
 
 ```clojure
 (rand)
@@ -182,3 +215,14 @@ To simulate a 6 sided dice:
 (take 11 (repeatedly #(inc (rand-int 6))))
 (3 4 1 4 1 3 5 3 6 5 6)
 ```
+
+## References
+
+* [Calva](https://calva.io/)
+* [cljrfmt](https://github.com/weavejester/cljfmt)
+* [Clojure API](https://clojure.github.io/clojure/)
+* [Clojure Documentation](https://clojure.org/documentation)
+* [Clojure](https://clojure.org/)
+* [ClojureDocs](https://clojuredocs.org/)
+* [eftest](https://github.com/weavejester/eftest)
+* [Leiningen](https://leiningen.org/)
