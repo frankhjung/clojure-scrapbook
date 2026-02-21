@@ -3,6 +3,7 @@
 .joyride
 .lein-*
 .lsp/
+.m2/
 .nrepl-port
 .nrepl-port/
 *.class

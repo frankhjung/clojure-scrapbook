@@ -11,7 +11,7 @@
               [scrapbook.words :refer [validWord?]]))
 
 (defn -main "Main" [& _] ;; ignore input parameters
-  (println (str "Main: run code examples.\n"))
+  (println "Main: run code examples.\n")
   (println (str "book1 keys: " (keys book1)))
   (println (str "book1 vals: " (vals book1)))
   (println (str "book2 contains pages? " (contains? book2 :pages)))
